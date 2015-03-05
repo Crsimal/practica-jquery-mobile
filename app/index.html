@@ -14,29 +14,198 @@
 </head>
 <body>
 <!-- Pagina de login-->
-<div data-role="page" data-theme="b">
-
+<div data-role="page" data-theme="b" id="login">
   <div data-role="header">
     <h1>Introduzca sus datos de acceso</h1>
   </div>
   <div data-role="main" class="ui-content">
-    <form method="post" action="#eva">
+    <form method="post">
       <input type="text" name="usuario" id="usuario" placeholder="Usuario">
       <input type="text" name="pass" id="pass" placeholder="Contraseña">  
       <label for="red">Recordar contraseña</label>  
       <input type="checkbox" name="favcolor" id="red" value="red"> <br/>
-      <input type="submit" value="Iniciar Sesion"><br/>
-      <a href="#recuperarCredenciales">Recuperar datos de acceso</a>
-     
+      <a data-role="button" href="#curso">Entrar</a>
+      <a href="#recuperarCredenciales">Recuperar datos de acceso</a>     
     </form>
   </div>
-  
-
   <div data-role="footer">
     <h1>Evaluacion - jQuery Mobile</h1>
   </div>
-
 </div>
 <!-- Fin Pagina de login-->
+<!-- Pagina elegir curso-->
+<div data-role="page" id="curso"  data-theme="b">
+  <div data-role="header">
+    <h1>Selecciona el curso y el alumno a evaluar</h1>
+  </div>
+
+  <div data-role="main" class="ui-content">
+    <form method="post" action="demoform.asp">
+      <fieldset class="ui-field-contain">
+        <select name="day" id="day">
+          <option value="mon">1º DAW</option>
+          <option value="tue">2º DAW</option>
+          <option value="wed">1º DAM</option>
+          <option value="thu">2º DAM</option>
+          <option value="fri">1º ASIR</option>
+          <option value="sat">2º ASIR</option>
+        </select>
+      </fieldset>
+      <fieldset class="ui-field-contain">
+        <select name="day" id="day">
+          <option value="mon">Alfredo Holanda</option>
+          <option value="tue">Santiago Miller</option>
+          <option value="wed">Carlos Rodriguez</option>
+          <option value="thu">Daniel Illan</option>
+        </select>
+      </fieldset>
+          <a data-role="button" href="#evaluacion">Evaluar Alumno</a>
+          <a data-role="button" href="#login">Desconectar</a>
+    </form>
+  </div>
+   <div data-role="footer">
+    <h1>Evaluacion - jQuery Mobile</h1>
+  </div>
+</div>
+<!-- Fin Pagina elegir curso-->
+<!-- Pagina evaluacion-->
+<div data-role="page" id="evaluacion"  data-theme="b">
+  <div data-role="header">
+    <h1>Rellena todos los campos</h1>
+  </div>
+  <form>
+  <div data-role="main" class="ui-content">
+    <form method="post" action="demoform.asp">
+      <fieldset class="ui-field-contain">
+        <label for="day"><b>Entrada del alumno:</b></label>
+        <select name="day" id="day">
+          <option value="mon">Bien</option>
+          <option value="tue">Regular</option>
+          <option value="wed">Mal</option>
+        </select>
+      </fieldset>
+
+      <fieldset class="ui-field-contain">
+        <label for="day"><b>Indumentaria:</b></label>
+        <select name="day" id="day">
+          <option value="mon">Bien</option>
+          <option value="tue">Regular</option>
+          <option value="wed">Mal</option>
+        </select>
+      </fieldset>
+<br>
+
+
+  <div data-role="fieldcontain">
+        <fieldset data-role="controlgroup">
+            <legend><b>Introducción:</b></legend>
+            <input type="checkbox" name="checkbox-1" id="checkbox-1" class="custom" />
+            <label for="checkbox-1">Es atractiva</label>
+            <input type="checkbox" name="checkbox-2" id="checkbox-2" class="custom" />
+            <label for="checkbox-2">Queda claro el concepto</label>
+        </fieldset>
+  </div>
+<br>
+  <div data-role="fieldcontain">
+        <fieldset data-role="controlgroup">
+            <legend><b>Desarrollo:</b></legend>
+            <input type="checkbox" name="checkbox-5" id="checkbox-4" class="custom" />
+            <label for="checkbox-4">Orden en las ideas</label>
+            <input type="checkbox" name="checkbox-6" id="checkbox-5" class="custom" />
+            <label for="checkbox-5">Claridad en la exposicion</label>
+            <input type="checkbox" name="checkbox-7" id="checkbox-6" class="custom" />
+            <label for="checkbox-6">Aclaración de términos técnicos</label>
+        </fieldset>
+  </div>
+  <br>
+  <div data-role="fieldcontain">
+        <fieldset data-role="controlgroup">
+            <legend><b>Conclusión:</b></legend>
+            <input type="checkbox" name="checkbox-8" id="checkbox-8" class="custom" />
+            <label for="checkbox-8">Queda claro el objetivo del proyecto</label>
+            <input type="checkbox" name="checkbox-9" id="checkbox-9" class="custom" />
+            <label for="checkbox-9">Lo vende bien</label>
+        </fieldset>
+  </div>
+  <br>
+   <div data-role="fieldcontain">
+        <fieldset data-role="controlgroup">
+            <legend><b>Lenguaje no verbal:</b></legend>
+            <input type="checkbox" name="checkbox-11" id="checkbox-11" class="custom" />
+            <label for="checkbox-11">Dirije la mirada a todo el auditorio</label>
+            <input type="checkbox" name="checkbox-12" id="checkbox-12" class="custom" />
+            <label for="checkbox-12">Sonrisa/Expresión facial positiva</label>
+            <input type="checkbox" name="checkbox-13" id="checkbox-13" class="custom" />
+            <label for="checkbox-13">Posición correcta del cuerpo</label>
+            <input type="checkbox" name="checkbox-14" id="checkbox-14" class="custom" />
+            <label for="checkbox-14">Tics, gestos nerviosos</label>
+        </fieldset>
+  </div>
+  <br>
+   <div data-role="fieldcontain">
+        <fieldset data-role="controlgroup">
+            <legend><b>Seguridad:</b></legend>
+            <input type="checkbox" name="checkbox-15" id="checkbox-15" class="custom" />
+            <label for="checkbox-15">Seguridad en lo que expone:</label>
+            <input type="checkbox" name="checkbox-16" id="checkbox-16" class="custom" />
+            <label for="checkbox-16">La presentacion está trabajada:</label>
+        </fieldset>
+  </div>
+  <br>
+  <b>Expresion oral</b>
+  <div data-role="main" class="ui-content">
+
+      <label for="points">Entonación:</label>
+      <input type="range" name="points" id="points" value="5" min="0" max="10" data-highlight="true">
+      <label for="points">Volumen:</label>
+      <input type="range" name="points" id="points" value="5" min="0" max="10" data-highlight="true">
+      <label for="points">Velocidad:</label>
+      <input type="range" name="points" id="points" value="5" min="0" max="10" data-highlight="true">
+      <label for="points">Vacilación en la voz:</label>
+      <input type="range" name="points" id="points" value="5" min="0" max="10" data-highlight="true">
+      <label for="points">Pausas:</label>
+      <input type="range" name="points" id="points" value="5" min="0" max="10" data-highlight="true">
+      <label for="points">Utilización de muletillas:</label>
+      <input type="range" name="points" id="points" value="5" min="0" max="10" data-highlight="true">
+  
+  </div>
+
+
+  <div data-role="main" class="ui-content">
+    
+      <label for="switch"><b>Entusiasmo en lo que expone:</b></label>
+        <input type="checkbox" data-role="flipswitch" name="switch" id="switch" data-on-text="Si" data-off-text="No">
+      <label for="switch2"><b>Duraccion, se adecua a lo estipulado:</b></label>
+        <input type="checkbox" data-role="flipswitch" name="switch" id="switch2" data-on-text="Si" data-off-text="No">
+      <label for="switch3"><b>Logra atraer la atención del público:</b></label>
+        <input type="checkbox" data-role="flipswitch" name="switch" id="switch3" data-on-text="Si" data-off-text="No">
+        <label for="switch4"><b>Responde de forma coherente a las preguntas realizadas:</b></label>
+        <input type="checkbox" data-role="flipswitch" name="switch" id="switch4" data-on-text="Si" data-off-text="No">
+    
+  </div>
+</div>
+    </form>
+
+ <a data-role="button" href="#ponerNota">Poner nota</a>
+          <a data-role="button" href="#curso">Volver</a>
+
+   <div data-role="footer">
+    <h1>Evaluacion - jQuery Mobile</h1>
+  </div>
+</div>
+<!-- Fin Pagina evaluacion-->
+
+<!-- Pagina poner nota-->
+<div data-role="page" id="ponerNota"  data-theme="b">
+  <div data-role="header">
+    <h1>Puntúa al alumno</h1>
+  </div>
+
+ 
+<div data-role="footer">
+    <h1>Evaluacion - jQuery Mobile</h1>
+  </div>
+<!-- fin Pagina poner nota-->
+
 </body>
 </html>

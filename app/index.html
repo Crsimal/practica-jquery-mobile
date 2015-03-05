@@ -19,6 +19,19 @@
     <h1>Introduzca sus datos de acceso</h1>
   </div>
   <div data-role="main" class="ui-content">
+    <div data-role="controlgroup" data-type="horizontal">
+      <a href="#login" class="ui-btn">Página de login</a>
+
+       <a style="background:#3388cc;" href="#ayudanavegacion" data-rel="popup" data-transition="pop" class="my-tooltip-btn ui-btn ui-alt-icon ui-nodisc-icon ui-btn-inline ui-icon-info ui-btn-icon-notext ui-corner-all" title="Navegacion">Navegacion</a>
+
+              <div data-role="popup" id="ayudanavegacion" class="ui-content" data-theme="a" style="max-width:350px;">
+                <p>Utiliza este menú de navegación para moverte entre las diferentes páginas que vas visitando.</p>
+              </div>
+    </div>
+<hr>
+  
+  </div>
+  <div data-role="main" class="ui-content">
     <form method="post">
       <input type="text" name="usuario" id="usuario" placeholder="Usuario">
       <input type="text" name="pass" id="pass" placeholder="Contraseña">  
@@ -38,6 +51,21 @@
   <div data-role="header">
     <h1>Selecciona el curso y el alumno a evaluar</h1>
   </div>
+  <div data-role="main" class="ui-content">
+    <div data-role="controlgroup" data-type="horizontal">
+      <a href="#login" class="ui-btn">Página de login</a>
+      <a href="#curso" class="ui-btn">Página de selección de alumno</a>
+      <a style="background:#3388cc;" href="#ayudanavegacion" data-rel="popup" data-transition="pop" class="my-tooltip-btn ui-btn ui-alt-icon ui-nodisc-icon ui-btn-inline ui-icon-info ui-btn-icon-notext ui-corner-all" title="Navegacion">Navegacion</a>
+
+              <div data-role="popup" id="ayudanavegacion" class="ui-content" data-theme="a" style="max-width:350px;">
+                <p>Utiliza este menú de navegación para moverte entre las diferentes páginas que vas visitando.</p>
+              </div>
+    </div>
+
+  
+  </div>
+
+  <hr>
 
   <div data-role="main" class="ui-content">
     <form method="post" action="demoform.asp">
@@ -73,6 +101,23 @@
   <div data-role="header">
     <h1>Rellena todos los campos</h1>
   </div>
+
+  <div data-role="main" class="ui-content">
+    <div data-role="controlgroup" data-type="horizontal">
+      <a href="#login" class="ui-btn">Página de login</a>
+      <a href="#curso" class="ui-btn">Página de selección de alumno</a>
+      <a href="#evaluacion" class="ui-btn">Página de evaluación</a>
+      <a style="background:#3388cc;" href="#ayudanavegacion" data-rel="popup" data-transition="pop" class="my-tooltip-btn ui-btn ui-alt-icon ui-nodisc-icon ui-btn-inline ui-icon-info ui-btn-icon-notext ui-corner-all" title="Navegacion">Navegacion</a>
+
+              <div data-role="popup" id="ayudanavegacion" class="ui-content" data-theme="a" style="max-width:350px;">
+                <p>Utiliza este menú de navegación para moverte entre las diferentes páginas que vas visitando.</p>
+              </div>
+    </div>
+
+   
+  </div>
+
+<hr>
   <form>
   <div data-role="main" class="ui-content">
     <form method="post" action="demoform.asp">
@@ -201,7 +246,59 @@
     <h1>Puntúa al alumno</h1>
   </div>
 
- 
+<div data-role="main" class="ui-content">
+    <div data-role="controlgroup" data-type="horizontal">
+      <a href="#login" class="ui-btn">Página de login</a>
+      <a href="#curso" class="ui-btn">Página de selección de alumno</a>
+      <a href="#evaluacion" class="ui-btn">Página de evaluación</a>
+      <a href="#ponerNota" class="ui-btn">Página de puntuación</a>
+      <a style="background:#3388cc;" href="#ayudanavegacion" data-rel="popup" data-transition="pop" class="my-tooltip-btn ui-btn ui-alt-icon ui-nodisc-icon ui-btn-inline ui-icon-info ui-btn-icon-notext ui-corner-all" title="Navegacion">Navegacion</a>
+
+              <div data-role="popup" id="ayudanavegacion" class="ui-content" data-theme="a" style="max-width:350px;">
+                <p>Utiliza este menú de navegación para moverte entre las diferentes páginas que vas visitando.</p>
+              </div>
+    </div>
+
+  
+  </div>
+<hr>
+
+<table data-role="table"  class="ui-responsive" id="myTable">
+      <thead>
+        <tr>
+          <th>Datos del alumno</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Familia profesional: </td>
+          <td>Informática y telecomunicaciones.</td>
+        </tr>
+        <tr>
+          <td>Curso:</td>
+          <td>2º DAW</td>
+        </tr>
+        <tr>
+          <td>Nombre:</td>
+          <td>Cristian Rico Simal</td>
+        </tr>
+
+      </tbody>
+    </table>
+
+<br><hr><br>
+
+<form>
+          <input type="text" data-clear-btn="true" name="proyecto" id="notaProj" value="" placeholder="CONTENIDO DEL PROYECTO (Máximo 6,5 ptos.)" data-theme="a">
+          <input type="text" data-clear-btn="true" name="presentacion" id="notaPre" value="" placeholder="CALIDAD DE PRESENTACION (Máx. 1 pto.)" data-theme="a">
+          <input type="text" data-clear-btn="true" name="exposicion" id="notaExp" value="" placeholder="EXPRESIÓN ORAL (Máximo 2,5 ptos)" data-theme="a">
+         
+        </form>
+        <br>
+  <a data-role="button" href="#curso">Puntuar y finalizar</a>
+          <a data-role="button" href="#evaluacion">Volver</a>
+
+
 <div data-role="footer">
     <h1>Evaluacion - jQuery Mobile</h1>
   </div>

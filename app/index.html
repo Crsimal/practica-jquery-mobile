@@ -14,34 +14,28 @@
 </head>
 <body>
 <!-- Pagina de login-->
-<div data-role="page" data-theme="b" id="login">
+<div data-role="page" data-theme="b" id="pantallaLogin">
   <div data-role="header">
     <h1>Introduzca sus datos de acceso</h1>
-    
-        <a href="#ajustes" class="ui-btn ui-icon-grid ui-btn-icon-left">Ajustes</a>
-
+        <a href="#pantallaAjustes" class="ui-btn ui-icon-grid ui-btn-icon-left">Ajustes</a>
   </div>
   <div data-role="main" class="ui-content">
     <div data-role="controlgroup" data-type="horizontal">
-      <a href="#login" class="ui-btn">Página de login</a>
-
-       <a style="background:#3388cc;" href="#ayudanavegacion" data-rel="popup" data-transition="pop" class="my-tooltip-btn ui-btn ui-alt-icon ui-nodisc-icon ui-btn-inline ui-icon-info ui-btn-icon-notext ui-corner-all" title="Navegacion">Navegacion</a>
-
-              <div data-role="popup" id="ayudanavegacion" class="ui-content" data-theme="a" style="max-width:350px;">
-                <p>Utiliza este menú de navegación para moverte entre las diferentes páginas que vas visitando.</p>
-              </div>
+      <a href="#pantallaLogin" class="ui-btn">Login</a>
+      <a style="background:#3388cc;" href="#ayudaNavegacion" data-rel="popup" data-transition="pop" class="my-tooltip-btn ui-btn ui-alt-icon ui-nodisc-icon ui-btn-inline ui-icon-info ui-btn-icon-notext ui-corner-all" title="Navegacion">Ayuda menú de navegación</a>
+      <div data-role="popup" id="ayudaNavegacion" class="ui-content" data-theme="a" style="max-width:350px;">
+         <p>Utiliza este menú de navegación para moverte entre las diferentes páginas que vas visitando.</p>
+      </div>
     </div>
-
-  
   </div>
   <div data-role="main" class="ui-content">
     <form method="post">
       <input type="text" name="usuario" id="usuario" placeholder="Usuario">
       <input type="text" name="pass" id="pass" placeholder="Contraseña">  
-      <label for="red">Recordar contraseña</label>  
-      <input type="checkbox" name="favcolor" id="red" value="red"> <br/>
-      <a data-role="button" href="#curso">Entrar</a>
-      <a href="#recuperarpass">Recuperar datos de acceso</a>     
+      <label for="recuerdaPass">Recordar contraseña</label>  
+      <input type="checkbox" name="favcolor" id="recuerdaPass" value="recuerdaPass"> <br/>
+      <a data-role="button" href="#pantallaCurso">Entrar</a>
+      <a href="#pantallaRecuperarpass">Recuperar datos de acceso</a>     
     </form>
   </div>
   <div data-role="footer">
@@ -50,70 +44,62 @@
 </div>
 <!-- Fin Pagina de login-->
 <!-- Pagina de recuperacion-->
-<div data-role="page" data-theme="b" id="recuperarpass">
-  <div data-role="header">
-    <h1>Introduzca sus datos de acceso</h1>
-  </div>
-  <br>
-  <form>
-          <input type="text" data-clear-btn="true" name="proyecto" id="notaProj" value="" placeholder="Introduzca aquí su e-mail para recuperar sus datos de acceso." data-theme="a">
-         
-        </form>
-        <br>
-  <a data-role="button" href="#login">Enviar</a>
-  <a data-role="button" href="#login">Volver</a>
-
-  <div data-role="footer">
-    <h1>Evaluacion - jQuery Mobile</h1>
-  </div>
+<div data-role="page" data-theme="b" id="pantallaRecuperarpass">
+    <div data-role="header">
+     <h1>Introduzca sus datos de acceso</h1>
+    </div>
+    <br>
+    <form>
+          <input type="text" data-clear-btn="true" name="recuperaPass" id="recuperaPass" value="" placeholder="Introduzca aquí su e-mail para recuperar sus datos de acceso." data-theme="a">        
+    </form>
+    <br>
+    <a data-role="button" href="#pantallaLogin">Enviar</a>
+    <a data-role="button" href="#pantallaLogin">Volver</a>
+    <div data-role="footer">
+      <h1>Evaluacion - jQuery Mobile</h1>
+    </div>
 </div>
 <!-- fin Pagina de recuperacion-->
-
 <!-- Pagina elegir curso-->
-<div data-role="page" id="curso"  data-theme="b">
+<div data-role="page" id="pantallaCurso"  data-theme="b">
   <div data-role="header">
-    <a href="#login" class="ui-btn ui-icon-back ui-btn-icon-notext ui-corner-all">Atrás</a>
+    <a href="#pantallaLogin" class="ui-btn ui-icon-back ui-btn-icon-notext ui-corner-all">Atrás</a>
     <h1>Selecciona el curso y el alumno a evaluar</h1>
   </div>
   <div data-role="main" class="ui-content">
     <div data-role="controlgroup" data-type="horizontal">
-      <a href="#login" class="ui-btn">Página de login</a>
-      <a href="#curso" class="ui-btn">Página de selección de alumno</a>
-      <a style="background:#3388cc;" href="#ayudanavegacion2" data-rel="popup" data-transition="pop" class="my-tooltip-btn ui-btn ui-alt-icon ui-nodisc-icon ui-btn-inline ui-icon-info ui-btn-icon-notext ui-corner-all" title="Navegacion">Navegacion</a>
-
-              <div data-role="popup" id="ayudanavegacion2" class="ui-content" data-theme="a" style="max-width:350px;">
-                <p>Utiliza este menú de navegación para moverte entre las diferentes páginas que vas visitando.</p>
-              </div>
+      <a href="#pantallaLogin" class="ui-btn">Página de login</a>
+      <a href="#pantallaCurso" class="ui-btn">Página de selección de alumno</a>
+      <a style="background:#3388cc;" href="#ayudaNavegacion2" data-rel="popup" data-transition="pop" class="my-tooltip-btn ui-btn ui-alt-icon ui-nodisc-icon ui-btn-inline ui-icon-info ui-btn-icon-notext ui-corner-all" title="Navegacion">Navegacion</a>
+          <div data-role="popup" id="ayudaNavegacion2" class="ui-content" data-theme="a" style="max-width:350px;">
+            <p>Utiliza este menú de navegación para moverte entre las diferentes páginas que vas visitando.</p>
+          </div>
     </div>
-
-  
   </div>
-
-
   <div data-role="main" class="ui-content">
     <form method="post" action="demoform.asp">
       <fieldset class="ui-field-contain">
         <b>Seleccione el curso:</b>
-        <select name="day" id="day">
-          <option value="mon">1º DAW</option>
-          <option value="tue">2º DAW</option>
-          <option value="wed">1º DAM</option>
-          <option value="thu">2º DAM</option>
-          <option value="fri">1º ASIR</option>
-          <option value="sat">2º ASIR</option>
+        <select name="curso" id="curso">
+          <option value="1daw">1º DAW</option>
+          <option value="2daw">2º DAW</option>
+          <option value="1dam">1º DAM</option>
+          <option value="2dam">2º DAM</option>
+          <option value="1asir">1º ASIR</option>
+          <option value="2asir">2º ASIR</option>
         </select>
       </fieldset>
       <fieldset class="ui-field-contain">
         <b>Seleccione el alumno:</b>
-        <select name="day" id="day">
-          <option value="mon">Alfredo Holanda</option>
-          <option value="tue">Santiago Miller</option>
-          <option value="wed">Carlos Rodriguez</option>
-          <option value="thu">Daniel Illan</option>
+        <select name="nombre" id="nombre">
+          <option value="Alf">Alfredo Holanda</option>
+          <option value="Sant">Santiago Miller</option>
+          <option value="Car">Carlos Rodriguez</option>
+          <option value="Dan">Daniel Illan</option>
         </select>
       </fieldset>
-          <a data-role="button" href="#evaluacion">Evaluar Alumno</a>
-          <a data-role="button" href="#login">Desconectar</a>
+          <a data-role="button" href="#pantallaEvaluacion">Evaluar Alumno</a>
+          <a data-role="button" href="#pantallaLogin">Desconectar</a>
     </form>
   </div>
    <div data-role="footer">
@@ -122,62 +108,51 @@
 </div>
 <!-- Fin Pagina elegir curso-->
 <!-- Pagina evaluacion-->
-<div data-role="page" id="evaluacion"  data-theme="b">
-
+<div data-role="page" id="pantallaEvaluacion"  data-theme="b">
   <div data-role="header">
     <h1>Guía de calificación</h1>
-    <a href="#curso" class="ui-btn ui-icon-back ui-btn-icon-notext ui-corner-all">Atrás</a>
+    <a href="#pantallaCurso" class="ui-btn ui-icon-back ui-btn-icon-notext ui-corner-all">Atrás</a>
   </div>
-
   <div data-role="main" class="ui-content">
     <div data-role="controlgroup" data-type="horizontal">
-      <a href="#login" class="ui-btn">Página de login</a>
-      <a href="#curso" class="ui-btn">Página de selección de alumno</a>
-      <a href="#evaluacion" class="ui-btn">Página de evaluación</a>
-      <a style="background:#3388cc;" href="#ayudanavegacion3" data-rel="popup" data-transition="pop" class="my-tooltip-btn ui-btn ui-alt-icon ui-nodisc-icon ui-btn-inline ui-icon-info ui-btn-icon-notext ui-corner-all" title="Navegacion">Navegacion</a>
-
-              <div data-role="popup" id="ayudanavegacion3" class="ui-content" data-theme="a" style="max-width:350px;">
-                <p>Utiliza este menú de navegación para moverte entre las diferentes páginas que vas visitando.</p>
-              </div>
+      <a href="#pantallaLogin" class="ui-btn">Página de login</a>
+      <a href="#pantallaCurso" class="ui-btn">Página de selección de alumno</a>
+      <a href="#pantallaEvaluacion" class="ui-btn">Página de evaluación</a>
+      <a style="background:#3388cc;" href="#ayudaNavegacion3" data-rel="popup" data-transition="pop" class="my-tooltip-btn ui-btn ui-alt-icon ui-nodisc-icon ui-btn-inline ui-icon-info ui-btn-icon-notext ui-corner-all" title="Navegacion">Navegacion</a>
+         <div data-role="popup" id="ayudaNavegacion3" class="ui-content" data-theme="a" style="max-width:350px;">
+             <p>Utiliza este menú de navegación para moverte entre las diferentes páginas que vas visitando.</p>
+         </div>
     </div>
-
-   
   </div>
-
-
   <form>
-   
   <div data-role="main" class="ui-content">
- <div data-role="collapsible"  class="ui-btn ui-icon-info ui-btn-icon-left">
-  <h1>Selección de lista</h1>
-  <p>Para calificar los apartados de selección en lista, simplemente clicka en el desplegable y selecciona tu decisión (Bien, regular, mal)</p>
-</div>
-    <form method="post" action="demoform.asp">
-
+      <div data-role="collapsible"  class="ui-btn ui-icon-info ui-btn-icon-left">
+           <h1>Selección de lista</h1>
+           <p>Para calificar los apartados de selección en lista, simplemente clicka en el desplegable y selecciona tu decisión (Bien, regular, mal)</p>
+      </div>
+      <form method="post" action="demoform.asp">
       <fieldset class="ui-field-contain">
-        <label for="day"><b>Entrada del alumno:</b></label>
-        <select name="day" id="day">
-          <option value="mon">Bien</option>
-          <option value="tue">Regular</option>
-          <option value="wed">Mal</option>
+        <label for="entrada"><b>Entrada del alumno:</b></label>
+        <select name="entrada" id="entrada">
+          <option value="bien">Bien</option>
+          <option value="regular">Regular</option>
+          <option value="mal">Mal</option>
         </select>
       </fieldset>
-
       <fieldset class="ui-field-contain">
-        <label for="day"><b>Indumentaria:</b></label>
-        <select name="day" id="day">
-          <option value="mon">Bien</option>
-          <option value="tue">Regular</option>
-          <option value="wed">Mal</option>
+        <label for="indumentaria"><b>Indumentaria:</b></label>
+        <select name="indumentaria" id="indumentaria">
+          <option value="bien">Bien</option>
+          <option value="regular">Regular</option>
+          <option value="mal">Mal</option>
         </select>
       </fieldset>
-<br>
-<div data-role="collapsible"  class="ui-btn ui-icon-info ui-btn-icon-left">
-  <h1>Selección mediante checkbox</h1>
-  <p>En los siguientes apartados, simplemente selecciona aquellas opciones que creas que cumple el alumno, y deja vacías las que no cumpla.</p>
-</div>
-
-  <div data-role="fieldcontain">
+      <br>
+      <div data-role="collapsible"  class="ui-btn ui-icon-info ui-btn-icon-left">
+        <h1>Selección mediante checkbox</h1>
+        <p>En los siguientes apartados, simplemente selecciona aquellas opciones que creas que cumple el alumno, y deja vacías las que no cumpla.</p>
+      </div>
+      <div data-role="fieldcontain">
         <fieldset data-role="controlgroup">
             <legend><b>Introducción:</b></legend>
             <input type="checkbox" name="checkbox-1" id="checkbox-1" class="custom" />
@@ -185,9 +160,9 @@
             <input type="checkbox" name="checkbox-2" id="checkbox-2" class="custom" />
             <label for="checkbox-2">Queda claro el concepto</label>
         </fieldset>
-  </div>
-<br>
-  <div data-role="fieldcontain">
+       </div>
+      <br>
+      <div data-role="fieldcontain">
         <fieldset data-role="controlgroup">
             <legend><b>Desarrollo:</b></legend>
             <input type="checkbox" name="checkbox-5" id="checkbox-4" class="custom" />
@@ -197,9 +172,9 @@
             <input type="checkbox" name="checkbox-7" id="checkbox-6" class="custom" />
             <label for="checkbox-6">Aclaración de términos técnicos</label>
         </fieldset>
-  </div>
-  <br>
-  <div data-role="fieldcontain">
+      </div>
+      <br>
+      <div data-role="fieldcontain">
         <fieldset data-role="controlgroup">
             <legend><b>Conclusión:</b></legend>
             <input type="checkbox" name="checkbox-8" id="checkbox-8" class="custom" />
@@ -207,9 +182,9 @@
             <input type="checkbox" name="checkbox-9" id="checkbox-9" class="custom" />
             <label for="checkbox-9">Lo vende bien</label>
         </fieldset>
-  </div>
-  <br>
-   <div data-role="fieldcontain">
+      </div>
+      <br>
+      <div data-role="fieldcontain">
         <fieldset data-role="controlgroup">
             <legend><b>Lenguaje no verbal:</b></legend>
             <input type="checkbox" name="checkbox-11" id="checkbox-11" class="custom" />
@@ -221,9 +196,9 @@
             <input type="checkbox" name="checkbox-14" id="checkbox-14" class="custom" />
             <label for="checkbox-14">Tics, gestos nerviosos</label>
         </fieldset>
-  </div>
-  <br>
-   <div data-role="fieldcontain">
+      </div>
+      <br>
+      <div data-role="fieldcontain">
         <fieldset data-role="controlgroup">
             <legend><b>Seguridad:</b></legend>
             <input type="checkbox" name="checkbox-15" id="checkbox-15" class="custom" />
@@ -231,84 +206,72 @@
             <input type="checkbox" name="checkbox-16" id="checkbox-16" class="custom" />
             <label for="checkbox-16">La presentacion está trabajada:</label>
         </fieldset>
-  </div>
-  <br>
-
-  <div data-role="collapsible"  class="ui-btn ui-icon-info ui-btn-icon-left">
-
-  <h1>Puntuación mediante slider</h1>
-  <p>Para calificar los apartados mediante slider, arrastra el slider segun la puntuación que creas que merece el alumno en ese aspecto, teniendo la nota un rango del 1 al 10.</p>
-</div>
-  <b>Expresion oral</b>
-  <div data-role="main" class="ui-content">
-
-      <label for="points">Entonación:</label>
-      <input type="range" name="points" id="points" value="5" min="0" max="10" data-highlight="true">
-      <label for="points">Volumen:</label>
-      <input type="range" name="points" id="points" value="5" min="0" max="10" data-highlight="true">
-      <label for="points">Velocidad:</label>
-      <input type="range" name="points" id="points" value="5" min="0" max="10" data-highlight="true">
-      <label for="points">Vacilación en la voz:</label>
-      <input type="range" name="points" id="points" value="5" min="0" max="10" data-highlight="true">
-      <label for="points">Pausas:</label>
-      <input type="range" name="points" id="points" value="5" min="0" max="10" data-highlight="true">
-      <label for="points">Utilización de muletillas:</label>
-      <input type="range" name="points" id="points" value="5" min="0" max="10" data-highlight="true">
-  
-  </div>
-<br>
-<div data-role="collapsible"  class="ui-btn ui-icon-info ui-btn-icon-left">
-  <h1>Selección mediante switch</h1>
-  <p>Para calificar los apartados de selección mediante switch, solamente tienes que hacer click en el switch dependiendo de si cumple con el aspecto o no.</p>
-</div>
-  <div data-role="main" class="ui-content">
-    
-      <label for="switch"><b>Entusiasmo en lo que expone:</b></label>
+      </div>
+      <br>
+      <div data-role="collapsible"  class="ui-btn ui-icon-info ui-btn-icon-left">
+         <h1>Puntuación mediante slider</h1>
+         <p>Para calificar los apartados mediante slider, arrastra el slider segun la puntuación que creas que merece el alumno en ese aspecto, teniendo la nota un rango del 1 al 10.</p>
+      </div>
+      <b>Expresion oral</b>
+      <div data-role="main" class="ui-content">
+        <label for="points">Entonación:</label>
+        <input type="range" name="points" id="points" value="5" min="0" max="10" data-highlight="true">
+        <label for="points">Volumen:</label>
+        <input type="range" name="points" id="points" value="5" min="0" max="10" data-highlight="true">
+        <label for="points">Velocidad:</label>
+        <input type="range" name="points" id="points" value="5" min="0" max="10" data-highlight="true">
+        <label for="points">Vacilación en la voz:</label>
+        <input type="range" name="points" id="points" value="5" min="0" max="10" data-highlight="true">
+        <label for="points">Pausas:</label>
+        <input type="range" name="points" id="points" value="5" min="0" max="10" data-highlight="true">
+        <label for="points">Utilización de muletillas:</label>
+        <input type="range" name="points" id="points" value="5" min="0" max="10" data-highlight="true">
+      </div>
+      <br>
+      <div data-role="collapsible"  class="ui-btn ui-icon-info ui-btn-icon-left">
+        <h1>Selección mediante switch</h1>
+        <p>Para calificar los apartados de selección mediante switch, solamente tienes que hacer click en el switch dependiendo de si cumple con el aspecto o no.</p>
+      </div>
+      <div data-role="main" class="ui-content">
+        <label for="switch"><b>Entusiasmo en lo que expone:</b></label>
         <input type="checkbox" data-role="flipswitch" name="switch" id="switch" data-on-text="Si" data-off-text="No">
-      <label for="switch2"><b>Duraccion, se adecua a lo estipulado:</b></label>
+        <label for="switch2"><b>Duraccion, se adecua a lo estipulado:</b></label>
         <input type="checkbox" data-role="flipswitch" name="switch" id="switch2" data-on-text="Si" data-off-text="No">
-      <label for="switch3"><b>Logra atraer la atención del público:</b></label>
+        <label for="switch3"><b>Logra atraer la atención del público:</b></label>
         <input type="checkbox" data-role="flipswitch" name="switch" id="switch3" data-on-text="Si" data-off-text="No">
         <label for="switch4"><b>Responde de forma coherente a las preguntas realizadas:</b></label>
         <input type="checkbox" data-role="flipswitch" name="switch" id="switch4" data-on-text="Si" data-off-text="No">
-    
-  </div>
+      </div>
 </div>
-    </form>
-
- <a data-role="button" href="#ponerNota">Poner nota</a>
-          <a data-role="button" href="#curso">Volver</a>
-
-   <div data-role="footer">
+</form>
+  <a data-role="button" href="#pantallaPonernota">Poner nota</a>
+  <a data-role="button" href="#pantallaCurso">Volver</a>
+  <div data-role="footer">
     <h1>Evaluacion - jQuery Mobile</h1>
   </div>
 </div>
 <!-- Fin Pagina evaluacion-->
 
 <!-- Pagina poner nota-->
-<div data-role="page" id="ponerNota"  data-theme="b" >
+<div data-role="page" id="pantallaPonernota"  data-theme="b" >
   <div data-role="header">
-    <a href="#evaluacion" class="ui-btn ui-icon-back ui-btn-icon-notext ui-corner-all">Atrás</a>
+    <a href="#pantallaEvaluacion" class="ui-btn ui-icon-back ui-btn-icon-notext ui-corner-all">Atrás</a>
     <h1>Puntúa al alumno</h1>
   </div>
 
 <div data-role="main" class="ui-content">
     <div data-role="controlgroup" data-type="horizontal">
-      <a href="#login" class="ui-btn">Página de login</a>
-      <a href="#curso" class="ui-btn">Página de selección de alumno</a>
-      <a href="#evaluacion" class="ui-btn">Página de evaluación</a>
-      <a href="#ponerNota" class="ui-btn">Página de puntuación</a>
+      <a href="#pantallaLogin" class="ui-btn">Página de login</a>
+      <a href="#pantallaCurso" class="ui-btn">Página de selección de alumno</a>
+      <a href="#pantallaEvaluacion" class="ui-btn">Página de evaluación</a>
+      <a href="#pantallaPonernota" class="ui-btn">Página de puntuación</a>
       <a style="background:#3388cc;" href="#ayudanavegacion4" data-rel="popup" data-transition="pop" class="my-tooltip-btn ui-btn ui-alt-icon ui-nodisc-icon ui-btn-inline ui-icon-info ui-btn-icon-notext ui-corner-all" title="Navegacion">Navegacion</a>
-
-              <div data-role="popup" id="ayudanavegacion4" class="ui-content" data-theme="a" style="max-width:350px;">
-                <p>Utiliza este menú de navegación para moverte entre las diferentes páginas que vas visitando.</p>
-              </div>
+        <div data-role="popup" id="ayudanavegacion4" class="ui-content" data-theme="a" style="max-width:350px;">
+          <p>Utiliza este menú de navegación para moverte entre las diferentes páginas que vas visitando.</p>
+        </div>
     </div>
-
-  
-  </div>
-
-<table data-role="table"  class="ui-responsive" id="myTable">
+</div>
+<table data-role="table"  class="ui-responsive" id="tablaAlumno">
       <thead>
         <tr>
           <th>Datos del alumno</th>
@@ -327,56 +290,43 @@
           <td>Nombre:</td>
           <td>Cristian Rico Simal</td>
         </tr>
-
       </tbody>
     </table>
-
 <br><hr><br>
-
 <form>
-          <input type="text" data-clear-btn="true" name="proyecto" id="notaProj" value="" placeholder="CONTENIDO DEL PROYECTO (Máximo 6,5 ptos.)" data-theme="a">
-          <input type="text" data-clear-btn="true" name="presentacion" id="notaPre" value="" placeholder="CALIDAD DE PRESENTACION (Máx. 1 pto.)" data-theme="a">
-          <input type="text" data-clear-btn="true" name="exposicion" id="notaExp" value="" placeholder="EXPRESIÓN ORAL (Máximo 2,5 ptos)" data-theme="a">
-         
-        </form>
-        <br>
-  <a data-role="button" href="#curso">Puntuar y finalizar</a>
-          <a data-role="button" href="#evaluacion">Volver</a>
-
-
+    <input type="text" data-clear-btn="true" name="proyecto" id="notaProj" value="" placeholder="CONTENIDO DEL PROYECTO (Máximo 6,5 ptos.)" data-theme="a">
+    <input type="text" data-clear-btn="true" name="presentacion" id="notaPre" value="" placeholder="CALIDAD DE PRESENTACION (Máx. 1 pto.)" data-theme="a">
+    <input type="text" data-clear-btn="true" name="exposicion" id="notaExp" value="" placeholder="EXPRESIÓN ORAL (Máximo 2,5 ptos)" data-theme="a">
+</form>
+<br>
+  <a data-role="button" href="#pantallaCurso">Puntuar y finalizar</a>
+  <a data-role="button" href="#pantallaEvaluacion">Volver</a>
 <div data-role="footer">
     <h1>Evaluacion - jQuery Mobile</h1>
-  </div>
+</div>
 </div>
 <!-- fin Pagina poner nota-->
 
 <!-- Pagina ajuestes-->
-<div data-role="page" id="ajustes"  data-theme="b" >
+<div data-role="page" id="pantallaAjustes"  data-theme="b" >
   <div data-role="header">
-    <a href="#login" class="ui-btn ui-icon-back ui-btn-icon-notext ui-corner-all"></a>
+    <a href="#pantallaLogin" class="ui-btn ui-icon-back ui-btn-icon-notext ui-corner-all"></a>
     <h1>Ajustes</h1>
   </div>
-
  <label for="switch11"><b>Activar sonido:</b></label>
-        <input type="checkbox" data-role="flipswitch" name="switch" id="switch11" data-on-text="Si" data-off-text="No">
-        <label for="points"><b>Volumen del sonido:</b></label>
+      <input type="checkbox" data-role="flipswitch" name="switch" id="switch11" data-on-text="Si" data-off-text="No">
+ <label for="points"><b>Volumen del sonido:</b></label>
       <input type="range" name="points" id="points" value="15" min="0" max="20" data-highlight="true">
-<label for="switch12"><b>Recordar contraseñas:</b></label>
-        <input type="checkbox" data-role="flipswitch" name="switch" id="switch12" data-on-text="Si" data-off-text="No">
+ <label for="switch12"><b>Recordar contraseñas:</b></label>
+      <input type="checkbox" data-role="flipswitch" name="switch" id="switch12" data-on-text="Si" data-off-text="No">
  <label for="switch13"><b>Tema de la aplicación:</b></label>
-        <input type="checkbox" data-role="flipswitch" name="switch" id="switch13" data-on-text="Light" data-off-text="Dark">
-
-         <a data-role="button" href="#login">Guardar y salir</a>
-          <a data-role="button" href="#login">Salir sin guardar</a>
-
-
-
+      <input type="checkbox" data-role="flipswitch" name="switch" id="switch13" data-on-text="Light" data-off-text="Dark">
+ <a data-role="button" href="#pantallaLogin">Guardar y salir</a>
+ <a data-role="button" href="#pantallaLogin">Salir sin guardar</a>
 <div data-role="footer">
     <h1>Evaluacion - jQuery Mobile</h1>
   </div>
-
 </div>
 <!-- fin Pagina ajustes-->
-
 </body>
 </html>
